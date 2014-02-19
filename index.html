@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<title>Matt.ca Gallery Script</title>
+		<link rel="stylesheet" type="text/css" href="gallery.css">
+		<script src="gallery.js"></script>
+		<script>
+			//an array of photos (from morguefile.com)
+			var photos = new Array(
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/1.jpg",
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/2.jpg",
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/3.jpg",
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/4.jpg",
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/5.jpg",
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/6.jpg",
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/7.jpg",
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/8.jpg",
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/9.jpg",
+				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/10.jpg"
+			);
+			//a url for the back button
+			var backURL = 'https://github.com/matthewca/mattca-gallery';
+			//number of images to buffer
+			var buffer = 1;
+			//make the gallery, passing in the array of photos
+			mattcaGallery(photos, backURL, buffer);
+		</script>
+	</head>
+	<body>
+		<script src="http://localhost:35729/livereload.js"></script>    
+	</body>
+</html> 

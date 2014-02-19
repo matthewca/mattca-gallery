@@ -1,0 +1,11 @@
+{
+  "name": "mattca-gallery-script",
+  "version": "0.0.1",
+	"author": "Matthew Smith",
+  "dependencies": {
+    "grunt": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-sass": "latest"
+  }
+}
