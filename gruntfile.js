@@ -16,8 +16,15 @@ module.exports = function(grunt) {
 		sass: { //task
 			strawberry: { //target
 				options: { //options
-					config: 'config.rb'
-				}
+					style: 'compressed'
+				},
+				files: [{
+					expand: true,
+					cwd: 'components/sass',
+					src: ['**/*.scss'],
+					dest: '',
+					ext: '.css'
+				}]
 			}
 		},
 		watch: {
