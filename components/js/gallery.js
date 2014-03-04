@@ -1,12 +1,3 @@
-/*!
- *
- * @license Copyright (c) 2014, Matthew Smith. All rights reserved.
- * This work is subject to the terms at http://www.matt.ca/8cHk/terms-of-use
- *
- * @author: Matthew Smith, matt@matt.ca
- *
- **/
-
 function mattcaGallery(photos, backURL, buffer) {
   
   
