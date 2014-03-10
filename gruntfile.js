@@ -9,7 +9,12 @@ module.exports = function(grunt) {
 					'gallery.js': ['components/js/*.js']
 				},
 				options: {
-					'preserveComments': 'some'
+					preserveComments: 'some',
+					//mangle: false, //for testing
+					//compress: false, //for testing
+					compress: {
+						drop_console: true //for production
+					}
 				}
 			}
 		},
