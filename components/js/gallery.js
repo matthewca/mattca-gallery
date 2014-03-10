@@ -1,11 +1,10 @@
 function mattcaGallery(photos, backURL, buffer) {
   
-  
   /* Variables */
   
   var theBody; //reference to the body tag
   var gallery; //the gallery is a div that contains div.photo's
-  var photoArray; // array of photo urls
+  var photoArray = arguments[0]; // array of photo urls
   var startImageObjectArray; // array of images to load at the start
   var startIconObjectArray; // array of icons to load at the start
   var imageObjectArray; // array of image objects
@@ -28,9 +27,9 @@ function mattcaGallery(photos, backURL, buffer) {
   var url; // the address 
   var regExp; // regular expression
   var regRes; // regular express result matches
-  var buffer; // this is the number of images in front and behind the position that will be loaded in the dom
+  var buffer = arguments[2]; // this is the number of images in front and behind the position that will be loaded in the dom
   var bufferTimeout; // reference to the setTimeout result used in movePosition function
-  var backURL;
+  var backURL = arguments[1];
   var moveTimeout;
   
   var inTransition = false; // true if in between photo transition
@@ -125,7 +124,6 @@ function mattcaGallery(photos, backURL, buffer) {
     closeButton = document.querySelector('.close-icon');
     //enable photo transitions
     enablePhotoTransition();
-    photoArray = photos; //assign array of photos urls to 
     //if a photo position is requested
     url = window.location.search;
     regExp = /photo=(\d*)/;
@@ -135,14 +133,12 @@ function mattcaGallery(photos, backURL, buffer) {
     //add event listeners
     addEventListeners();
     //if backurl is set
-    console.log(backURL);
     if (backURL == null || backURL == '') {
       closeButton.style.display = 'none';
       backURL = '';
     } else {
       backURL = backURL;
     }
-    console.log(backURL);
     if (buffer == null) {
       buffer = 3;
     } else {

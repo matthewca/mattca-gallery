@@ -22,12 +22,8 @@
 				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/9.jpg",
 				"https://s3-us-west-2.amazonaws.com/mattca-images/gallery-script/10.jpg"
 			);
-			//a url for the back button
-			var backURL = 'https://github.com/matthewca/mattca-gallery';
-			//number of images to buffer
-			var buffer = 1;
 			//make the gallery, passing in the array of photos
-			mattcaGallery(photos, backURL, buffer);
+			new mattcaGallery(photos, 'https://github.com/matthewca/mattca-gallery', 1);
 		</script>
 	</head>
 	<body>
